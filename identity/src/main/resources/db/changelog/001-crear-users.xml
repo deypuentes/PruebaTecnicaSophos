@@ -7,7 +7,7 @@
 
     <changeSet author="deypuentes" id="crear usuarios identity">
         <createTable tableName="user_identity">
-            <column name="id" type="BIGINT(5)">
+            <column name="id" type="BIGINT(5)" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
             <column name="username" type="VARCHAR(100)">
