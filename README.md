@@ -18,3 +18,7 @@ Se realiza entrega de 2 Microservicios como parte de la prueba tecnica presentad
 *https://2feb-200-118-63-3.ngrok.io 
 **Microservicio Identity
 *https://d1b7-200-118-63-3.ngrok.io
+
+##Swagger Documentación
+*localhost:8081/swagger-ui/
+*localhost:8080/swagger-ui/
