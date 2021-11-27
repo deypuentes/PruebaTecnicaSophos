@@ -6,5 +6,6 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
    
     <include file="/db/changelog/001-crear-users.xml" />
+    <include file="/db/sql/user_identity.sql" />
     
 </databaseChangeLog>

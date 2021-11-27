@@ -25,9 +25,10 @@ public class UserIdentity{
     
     @Column
     @NotBlank(message = "Password is required")
-    @Size(min = 3, max = 8, message="El password tiene que tener entre 3 y 8 caracteres")
-    @Pattern(regexp = "[A-Za-z0-9]+", message="El password No puede tener caracteres especiales")
+    //@Size(min = 3, message="El password debe ser minimo de 3 caracteres")
+    //@Pattern(regexp = "[A-Za-z0-9]+", message="El password No puede tener caracteres especiales")
     private String password;
+    private String roles;
 
 	public Integer getId() {
 		return id;
@@ -51,6 +52,14 @@ public class UserIdentity{
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getRoles() {
+		return roles;
+	}
+
+	public void setRoles(String roles) {
+		this.roles = roles;
 	}
 
 
