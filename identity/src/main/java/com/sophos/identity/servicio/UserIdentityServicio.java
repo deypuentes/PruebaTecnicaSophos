@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,9 +22,6 @@ public class UserIdentityServicio {
 	@Autowired
 	private UserIdentityDAO dao;
 	
-	@Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-	
 	@Transactional(readOnly = true)
 	public List <UserIdentity> obtenerTodo() {
 		logger.debug("Iniciando operacion obtener todo");
@@ -35,10 +31,7 @@ public class UserIdentityServicio {
 				logger.warn("No se encontraron usuarios");
 				throw new RuntimeException("No se encontraron usuarios");
 			}
-		for(UserIdentity entidad :lista) {
-			entidad.setPassword("");
-			
-		}
+		
 		return lista;
 	}
 	
@@ -78,7 +71,6 @@ public class UserIdentityServicio {
 				throw new RuntimeException("Error Llave Unica");
 
 		}
-			entidad.setPassword(bCryptPasswordEncoder.encode(entidad.getPassword()));
 			dao.save(entidad);
 
 		return entidad;

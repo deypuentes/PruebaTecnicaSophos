@@ -18,7 +18,7 @@ public class UserIdentityConversor {
 		dto.setId(entidad.getId());
 		dto.setUsername(entidad.getUsername());
 		dto.setPassword(entidad.getPassword());
-		dto.setRoles(entidad.getRoles());
+		dto.setId(entidad.getId());
 		return dto;
 	}
 	
@@ -27,7 +27,7 @@ public class UserIdentityConversor {
 		entidad.setId(dto.getId());
 		entidad.setUsername(dto.getUsername());
 		entidad.setPassword(dto.getPassword());
-		entidad.setRoles(dto.getRoles());
+		
 		return entidad;
 	}
 	

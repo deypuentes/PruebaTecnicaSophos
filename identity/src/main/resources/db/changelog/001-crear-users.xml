@@ -15,10 +15,7 @@
             </column> 
              <column name="password" type="VARCHAR(100)">
                 <constraints nullable="false"/>
-            </column>    
-             <column name="roles" type="VARCHAR(100)">
-                <constraints nullable="false"/>
-            </column>                    
+            </column>                      
         </createTable>
         <addUniqueConstraint 
             columnNames="username"
